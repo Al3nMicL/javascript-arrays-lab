@@ -20,3 +20,25 @@ var destructivelyRemoveLastKitten = (name) => {
 var destructivelyRemoveFirstKitten = (name) => {
 	return kittens.shift(name);
 };
+
+// appends a kitten to the kittens array and returns a new array
+var appendKitten = (name) => {
+	return kittens.concat(name);
+};
+
+// prepends a kitten to the kittens array and returns a new array
+var prependKitten = (name) => {
+	var cat = new Array(name);
+	var litter = cat.concat(kittens);
+	return litter;
+};
+
+// removes the last kitten in the kittens array and returns a new array
+var removeLastKitten = (name) => {
+	return kittens.slice(0, kittens.length -1);
+};
+
+// removes the first kitten from the kittens array and returns a new array
+var removeFirstKitten = (name) => {
+	return kittens.slice(1, kittens.length);
+};
